@@ -115,7 +115,7 @@ export default {
     },
     paste(col, row) {
       if (copyType === "row") {
-        this.$set(this.valuesSchedule, col, copied);
+        this.$set(this.valuesSchedule, col, [...copied]);
       } else if (copyType === "col") {
         for (let j = 0; j < 8; j++) {
           this.$set(this.valuesSchedule[j], row, copied[j]);
@@ -156,14 +156,14 @@ export default {
   grid-auto-rows: minmax(50px, auto);
   justify-items: center;
   align-items: center;
-  width: 60%;
+  width: 800px;
   margin: 0 auto;
   background-color: #fff;
 }
 .labels {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 4.5rem;
+  display: inline-flex;
+  justify-content: space-evenly;
 }
 .inputfield {
   width: 4.5rem;
@@ -171,7 +171,6 @@ export default {
   margin-left: 1rem;
   border-color: #eee;
   border-width: 0.1rem;
-  box-shadow: none;
   border-style: solid;
 }
 </style>
