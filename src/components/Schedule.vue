@@ -67,14 +67,14 @@ const moment = require("moment");
 let beginDate = moment();
 let endDate = moment();
 let dates = [
-  '',
-  '',
-  '',
-  '',
-  '',
-  '',
-  '',
-  ''
+  '23/03/20',
+  '24/03/20',
+  '25/03/20',
+  '26/03/20',
+  '27/03/20',
+  '28/03/20',
+  '29/03/20',
+  '30/03/20'
 ];
 let copyType;
 let copied;
